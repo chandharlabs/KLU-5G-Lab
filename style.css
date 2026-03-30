@@ -122,9 +122,7 @@ main {
   flex: 1;
 }
 
-.section:last-child {
-  margin-bottom: 40px; /* or padding-bottom: 40px */
-}
+
 
 .section {
   background: white;
