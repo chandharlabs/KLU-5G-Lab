@@ -19,7 +19,7 @@ body {
   color: #222;
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 100dvh; /* dynamic viewport height */
   line-height: 1.5;
 }
 
@@ -122,8 +122,6 @@ main {
   flex: 1;
 }
 
-
-
 .section {
   background: white;
   padding: 28px;
@@ -131,6 +129,12 @@ main {
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
   margin-top: -40px;
   margin-bottom: 40px;
+}
+
+/* Remove bottom margin from last section to avoid extra space */
+.section:last-of-type {
+  margin-bottom: 0;
+  padding-bottom: 20px; /* optional spacing before footer */
 }
 
 /* Headings */
