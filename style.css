@@ -19,7 +19,7 @@ body {
   color: #222;
   display: flex;
   flex-direction: column;
-  min-height: 100dvh; /* dynamic viewport height */
+  min-height: 100dvh; /* dynamic viewport height – fixes mobile footer */
   line-height: 1.5;
 }
 
@@ -79,7 +79,6 @@ nav a {
   display: inline-block;
 }
 
-/* Increase tap target size on touch devices */
 @media (hover: hover) {
   nav a:hover {
     background-color: rgba(255, 255, 255, 0.1);
@@ -131,7 +130,7 @@ main {
   margin-bottom: 40px;
 }
 
-/* Remove bottom margin from last section to avoid extra space */
+/* Remove bottom margin from last section – prevents extra scroll on short pages */
 .section:last-of-type {
   margin-bottom: 0;
   padding-bottom: 20px; /* optional spacing before footer */
@@ -354,7 +353,7 @@ a:hover {
   font-size: 1rem;
   transition: background 0.2s;
   margin-top: 8px;
-  min-height: 48px; /* Better tap target */
+  min-height: 48px;
 }
 
 .contact-form button:hover {
@@ -372,6 +371,7 @@ a:hover {
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   border: 0;
+  display: block; /* removes any inline spacing */
 }
 
 /* Footer */
@@ -476,7 +476,7 @@ footer p {
 
   .contact-form input,
   .contact-form textarea {
-    font-size: 16px; /* Prevents zoom on iOS */
+    font-size: 16px; /* prevents zoom on iOS */
   }
 
   .map-section iframe {
